@@ -1,32 +1,39 @@
-PostgreSQL Basics: CRUD Operations and Relational Joins
+# PostgreSQL Basics: CRUD Operations and Relational Joins
+
 Welcome to the README for learning PostgreSQL basics, focusing on CRUD (Create, Read, Update, Delete) operations and relational joins. This guide is inspired by Harkirat Singh's courses on the subject. Let's dive in!
 
-Table of Contents
-Introduction to PostgreSQL
-Setting Up PostgreSQL
-Basic CRUD Operations
-Relational Joins
-Resources
-Introduction to PostgreSQL
+## Table of Contents
+
+- [Introduction to PostgreSQL](#introduction-to-postgresql)
+- [Setting Up PostgreSQL](#setting-up-postgresql)
+- [Basic CRUD Operations](#basic-crud-operations)
+- [Relational Joins](#relational-joins)
+- [Resources](#resources)
+
+## Introduction to PostgreSQL
+
 PostgreSQL is a powerful, open-source relational database management system (RDBMS) known for its robustness, reliability, and extensibility. It supports SQL (Structured Query Language) and offers various advanced features like transactions, triggers, and stored procedures.
 
-Setting Up PostgreSQL
+## Setting Up PostgreSQL
+
 Before diving into CRUD operations and relational joins, you need to set up PostgreSQL on your system. Follow these steps:
 
-Download PostgreSQL: Visit the official PostgreSQL website and download the appropriate version for your operating system.
-Install PostgreSQL: Run the installer and follow the installation instructions. Make sure to note down the username, password, and port number used during the installation process.
-Start PostgreSQL Server: Once installed, start the PostgreSQL server using the provided commands or through the system's services.
-Basic CRUD Operations
+1. **Download PostgreSQL:** Visit the official PostgreSQL website and download the appropriate version for your operating system.
+2. **Install PostgreSQL:** Run the installer and follow the installation instructions. Make sure to note down the username, password, and port number used during the installation process.
+3. **Start PostgreSQL Server:** Once installed, start the PostgreSQL server using the provided commands or through the system's services.
+
+## Basic CRUD Operations
+
 CRUD operations are fundamental in database management. Here's how you can perform CRUD operations using PostgreSQL:
 
-Create: Use INSERT statements to add new records to a table.
-Read: Retrieve data from a table using SELECT statements.
-Update: Modify existing records using UPDATE statements.
-Delete: Remove records from a table using DELETE statements.
+- **Create:** Use INSERT statements to add new records to a table.
+- **Read:** Retrieve data from a table using SELECT statements.
+- **Update:** Modify existing records using UPDATE statements.
+- **Delete:** Remove records from a table using DELETE statements.
+
 Here's a simple example of CRUD operations:
 
-sql
-Copy code
+```sql
 -- Create
 INSERT INTO users (name, email) VALUES ('John Doe', 'john@example.com');
 
@@ -38,21 +45,4 @@ UPDATE users SET email = 'johndoe@example.com' WHERE id = 1;
 
 -- Delete
 DELETE FROM users WHERE id = 1;
-Relational Joins
-Relational joins are used to combine rows from multiple tables based on a related column between them. PostgreSQL supports different types of joins, including:
-
-INNER JOIN
-LEFT JOIN (or LEFT OUTER JOIN)
-RIGHT JOIN (or RIGHT OUTER JOIN)
-FULL JOIN (or FULL OUTER JOIN)
-Here's an example of an INNER JOIN:
-
-sql
-Copy code
-SELECT orders.order_id, customers.name
-FROM orders
-INNER JOIN customers ON orders.customer_id = customers.customer_id;
-Resources
-Official PostgreSQL Documentation
-Harkirat Singh's PostgreSQL Courses (Replace with actual course links)
-PostgreSQL Tutorial
+```
